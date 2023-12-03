@@ -1,0 +1,42 @@
+[tool.isort]
+multi_line_output = 3
+line_length = 79
+include_trailing_comma = true
+
+[tool.black]
+line_length = 79
+
+
+[tool.pylint.messages_control]
+# Use multiple processes to speed up Pylint.
+jobs = 2
+disable = [
+    "duplicate-code",
+    "no-self-use",
+    "invalid-name",
+    "missing-docstring",
+    "too-few-public-methods",
+    "no-name-in-module",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "import-error",
+    "too-many-lines",
+    "too-many-branches",
+    "too-many-statements",
+    "too-many-locals",
+    "broad-except",
+    "too-many-arguments"]
+
+[tool.pylint.main]
+fail-under = 9
+load-plugins = ["pylint.extensions.no_self_use", "pylint_pydantic"]
+ignore-paths = ["exports/tests"]
+
+[tool.mypy]
+scripts_are_modules = true
+warn_unused_ignores = true
+show_error_codes = true
+enable_error_code = "ignore-without-code"
+strict = true
+# TODO: Remove this once pytest has annotations
+disallow_untyped_decorators = false
