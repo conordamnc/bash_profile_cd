@@ -20,3 +20,9 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 alias svim='sudo vi'
+alias dc='docker compose'
+alias gs='git status'
+alias gm='git commit -m '
+alias logs='dc logs -f --tail 1000 '
+
+
