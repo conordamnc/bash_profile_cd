@@ -105,3 +105,11 @@ ignore = [
     # bandit: Use of `assert` detected
     "S101",
 ]
+
+[tool.coverage.report]
+fail_under = 80
+omit = ["exports/tests/*"]
+
+[tool.coverage.run]
+branch = true
+omit = ["exports/tests/*"]

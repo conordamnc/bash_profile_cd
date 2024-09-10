@@ -7,7 +7,7 @@ repos:
   - id: black
     language_version: python3.10.2
     exclude: 'setup.py'
-    args: [--line-length=79]
+    args: [--config=pyproject.toml]
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.5.0
   hooks:
@@ -19,3 +19,9 @@ repos:
   rev: 6.1.0
   hooks:
   - id: flake8
+- repo: https://github.com/PyCQA/bandit
+  rev: 1.7.5
+  hooks:
+  - id: bandit
+    args: ["-c", "pyproject.toml"]
+    additional_dependencies: [ "bandit[toml]" ]
