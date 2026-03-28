@@ -1,3 +1,6 @@
+CLAUDE.md
+Session.vim
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -141,4 +144,3 @@ exports/settings/localsettings.py
 Jenkinsfile
 
 docker-compose.override.yml
-
